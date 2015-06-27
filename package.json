@@ -1,0 +1,19 @@
+{
+  "name": "gisteefd33883e49cde32854-49f9f8b8308a710c8f618d467166b912ed2a287b",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.13.1",
+    "express": "^4.6.1",
+    "http-auth": "^2.2.8",
+    "method-override": "^2.3.3",
+    "mongoose": "^4.0.6",
+    "morgan": "^1.6.0"
+  }
+}

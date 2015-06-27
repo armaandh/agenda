@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html ng-app="myModules">
+<head>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Goals Tracker</title>
+    
+    
+    
+    <script src="jquery.js"></script>
+    <link href="bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="angular-ui-switch.css"/>
+   
+    <!--<link href="bootstrap-switch.css" rel="stylesheet">-->
+    <script src="bootstrap.js"></script>
+    <!-- <script src="bootstrap-switch.js"></script> --> 
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+    
+    
+</head>
+<body ng-controller="TodoCtrl">
+
+    <div class="container">
+      
+      <div class="form-group">
+        </br>
+   <input class="form-control input-lg add-input" type="text" placeholder="Enter here what you finished today" class="form-control" id="usr" ng-model="formData.text">
+  </br>
+   <button type="button" class="btn btn-primary btn-lg btn-block add-btn" ng-click="createTodo()">Save </button> <br>
+  <div class="form-group">
+        
+            
+               <!-- <input type="checkbox" name="sophieVal" ng-checked="isChecked()" ng-model="formData.done" ng-init="checked=false">-->
+               
+               <div class="checkbox inline">
+                <input type="checkbox" name="done" ng-model="formData.done"">
+                <label>Sophie</label> 
+               </div>
+            
+            
+               <!-- <input type="checkbox" name="sophieVal" ng-checked="isChecked()" ng-model="formData.done" ng-init="checked=false">-->
+               <div class="checkbox inline">
+                <input type="checkbox">
+                <label>Armaan</label>
+                </div>
+                </div>
+            
+    </div>
+    
+</div>
+
+
+      <div class="table-responsive">
+        <div class="panel panel-default">
+ <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Person</th>
+        <th>Work</th>
+        <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="todo in todos" ng-style="personColour" ng-class="{current: selected == $index }">
+        <td id="people" ng-class="{'pending-delete': todo.done, 'pending-deleter': !todo.done}"></td>
+        <td>{{todo.text}}</td>
+        <td>{{todo.dob | date:"MM/dd/yyyy 'at' h:mma"}}</td>
+        </tr>
+      </tbody>
+  </table>
+        </div>
+</div>
+
+</div>
+
+      <!--<ul>
+        {{todo.date | date:'medium'}}
+        <li ng-repeat="todo in todos" ng-style="personColour" ng-class="{current: selected == $index }">
+       <div>   
+        <span  ng-class="{'pending-delete': todo.done}">{{todo.text}}</span>
+        
+        <!--<span ng-show="todo.done==true">SOPH</span>-->
+        
+        <!--<input type="image" src="sophie.jpg" class="img-circle" alt="Sophie" width="25" height="35" ng-click="personColour={color:'green'}">
+        <input type="image" src="armaan.jpg" class="img-circle" alt="Sophie" width="35" height="35" ng-click="personColour={color:'red'}">-->
+        
+        
+       <!--</div>        
+        </li>
+      </ul>  
+    </div>-->
+  <script src="index.js"></script>
+  <script src="angular-ui-switch.js"></script> 
+</body>
+</html>
